@@ -28,7 +28,7 @@ jobs:
             sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
             sudo sed -i '/jessie-updates/d' /etc/apt/sources.list
             sudo apt-get update
-            sudo apt-get -y install google-chrome-stable
+            sudo apt-get -y install google-chrome-beta
       - run:
           name: Upgrade Node.js
           command: |

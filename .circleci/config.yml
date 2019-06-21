@@ -30,6 +30,11 @@ jobs:
             sudo apt-get update
             sudo apt-get -y install google-chrome-stable
       - run:
+          name: Upgrade Node.js
+          command: |
+            curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+            sudo apt-get install -y nodejs
+      - run:
           name: Install Docker client
           command: |
             set -x

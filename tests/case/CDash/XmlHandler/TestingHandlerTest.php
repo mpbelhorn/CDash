@@ -21,9 +21,16 @@ use CDash\Messaging\Subscription\UserSubscriptionBuilder;
 use CDash\Messaging\Topic\Topic;
 use CDash\Messaging\Topic\TopicCollection;
 use CDash\Model\Subscriber;
+use CDash\Submission\CommitAuthorHandlerInterface;
 
 class TestingHandlerTest extends PHPUnit_Framework_TestCase
 {
+    public function testTestingHandlerIsACommitAuthorHandler()
+    {
+        $sut = new TestingHandler(0, 0);
+        $this->assertInstanceOf(CommitAuthorHandlerInterface::class, $sut);
+    }
+
     public function testGetBuildTopic()
     {
         $sut = new TestingHandler(1, 0);

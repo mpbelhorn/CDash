@@ -69,7 +69,6 @@ class CommitAuthorSubscriptionBuilderTest extends PHPUnit_Framework_TestCase
         $this->assertEmpty($subscriptions);
         $this->assertFalse($subscriptions->has('com.mitter@company.tld'));
         $this->assertFalse($subscriptions->has('auth.or@compnay.tld'));
-
     }
 
     public function testBuildGivenSubmissionWithTestFailures()

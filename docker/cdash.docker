@@ -49,7 +49,6 @@ WORKDIR /home/kitware/cdash
 
 # Copy CDash (current folder) into /home/kitware/cdash to set its owner
 # to www-data
-COPY ./.git ./.git
 COPY ./.circleci ./.circleci
 COPY ./app ./app
 COPY ./bootstrap ./bootstrap

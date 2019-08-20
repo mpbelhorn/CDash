@@ -65,4 +65,10 @@ CDash.controller('QueryTestsController',
       $.cookie("queryTests_num_per_page", $scope.pagination.numPerPage, { expires: 365 });
       $scope.pageChanged();
     };
+
+    $scope.formSubmit = function() {
+      var uri = '//' + location.host + location.pathname + '?project=' + $scope.cdash.projectname_encoded;
+      uri += '&begin=' + $scope.cdash.begin + '&end=' + $scope.cdash.end;
+      window.location = uri;
+    };
 });
